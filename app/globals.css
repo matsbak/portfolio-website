@@ -17,7 +17,15 @@
 }
 
 body {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
   color: rgb(var(--foreground-rgb));
+}
+
+#content {
+  margin: 20px 0;
+  max-width: 1200px;
 }
 
 @layer utilities {
