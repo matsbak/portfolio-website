@@ -10,7 +10,7 @@ const TechCard = ({ img, children }) => {
           alt={children + " logo"}
           width={30}
           height={30}
-        />
+      />
       <p className="mx-2">{children}</p>
     </div>
   );

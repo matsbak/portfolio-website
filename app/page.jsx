@@ -3,6 +3,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
+import Socials from "./components/Socials";
 
 const Page = () => {
   return (
@@ -12,6 +13,7 @@ const Page = () => {
       <Experience />
       <Technologies />
       <Projects />
+      <Socials />
     </>
   );
 }
