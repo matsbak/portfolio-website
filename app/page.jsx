@@ -4,6 +4,7 @@ import Experience from "./components/Experience";
 import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import Socials from "./components/Socials";
+import Footer from "./components/Footer";
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
       <Technologies />
       <Projects />
       <Socials />
+      <Footer />
     </>
   );
 }
