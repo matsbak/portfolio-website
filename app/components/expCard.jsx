@@ -15,7 +15,7 @@ const ExpCard = ({ header, from, to, img, children }) => {
           <Image
             className="ml-3"
             src={"/" + img}
-            alt={children + " logo"}
+            alt={header + " logo"}
             width={40}
             height={40}
           />
