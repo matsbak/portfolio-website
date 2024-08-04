@@ -5,11 +5,26 @@ import { useState } from "react";
 const ExpCard = ({ header, from, to, img, children }) => {
   const [descVisible, setDescVisibility] = useState(false);
 
+  const expand = () => {
+    let descEl = document.getElementById("desc");
+
+    if (descVisible) {
+      descEl.classList.remove("grid-rows-[0fr]", "opacity-0");
+      descEl.classList.add("grid-rows-[1fr]", "opacity-100");
+    } else {
+      descEl.classList.remove("grid-rows-[1fr]", "opacity-100");
+      descEl.classList.add("grid-rows-[0fr]", "opacity-0");
+    }
+  }
+
   return (
     <div className="m-3 rounded-lg bg-white">
       <div
         className="flex justify-between rounded-lg cursor-pointer transition-shadow duration-300 hover:shadow-md"
-        onClick={() => setDescVisibility(!descVisible)}
+        onClick={() => {
+          setDescVisibility(!descVisible);
+          expand();
+        }}
       >
         <div className="flex">
           <Image
@@ -31,7 +46,12 @@ const ExpCard = ({ header, from, to, img, children }) => {
           height={30}
         />
       </div>
-      {descVisible && <p className="p-3">{children}</p>}
+      <div
+        id="desc"
+        className="grid grid-rows-[0fr] opacity-0 transition-all duratiton-300 ease-in-out"
+      >
+        <p className="p-3 overflow-hidden">{children}</p>
+      </div>
     </div>
   );
 }
