@@ -15,6 +15,22 @@ module.exports = {
       colors: {
         "dark-sea-green": "#8fbc8f",
       },
+      animation: {
+        turn: "turn 0.1s linear forwards",
+      },
+      keyframes: {
+        turn: {
+          "0%": {
+            transform: "scaleY(1)",
+          },
+          "50%": {
+            transform: "scaleY(0)",
+          },
+          "100%": {
+            transform:"scaleY(-1)",
+          },
+        },
+      },
     },
   },
   plugins: [],
