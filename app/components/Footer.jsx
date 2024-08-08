@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="mt-4 p-4 rounded-t-xl text-white bg-[#2f4f4f]">
+    <footer className="mt-14 p-4 rounded-t-xl text-white bg-[#2f4f4f]">
       <p>
         This project is a simple one-page portfolio website coded using React with Next.js. The
         motivation behind the project was that I thought it was natural as a developer to have a

@@ -2,9 +2,10 @@ import TechCard from "./TechCard";
 
 const Technologies = () => {
   return (
-    <article className="mt-4 p-8 text-center rounded-xl bg-dark-sea-green/50">
-      <h2 className="mb-8 text-6xl font-bold">Technologies</h2>
-      <div className="p-3 min-h-52 rounded-xl bg-dark-sea-green/50">
+    <article className="mt-14 p-8 rounded-xl text-center bg-dark-sea-green/50">
+      <h2 className="text-6xl font-bold">Technologies</h2>
+      <p className="mt-8">Technologies I am familiar with.</p>
+      <div className="mt-8 p-6 min-h-64 rounded-xl bg-white">
         <div className="flex flex-wrap">
           <TechCard img="java.svg">Java</TechCard>
           <TechCard img="spring-boot.svg">Spring Boot</TechCard>

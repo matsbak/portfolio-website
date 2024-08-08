@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <article className="mt-4 p-8 text-center">
-      <h2 className="mb-8 text-6xl font-bold">About</h2>
-      <p className="mt-4">
+    <article className="mt-14 p-8 text-center">
+      <h2 className="text-6xl font-bold">About</h2>
+      <p className="mt-8">
         I am a bachelor's degree student in computer science, with application development as field
         of study, at Norwegian University of Science and Technology (NTNU).
       </p>

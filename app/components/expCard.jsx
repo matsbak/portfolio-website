@@ -11,8 +11,8 @@ const ExpCard = ({ header, from, to, img, children }) => {
       2024.08.07.
     */
 
-    let arrowEl = document.getElementById("arrow");
-    let cardEl = document.getElementById("card");
+    let arrowEl = document.getElementById(header + " arrow");
+    let cardEl = document.getElementById(header + " card");
 
     let desc = String(children);
 
@@ -22,13 +22,13 @@ const ExpCard = ({ header, from, to, img, children }) => {
       void arrowEl.offsetWidth;
       arrowEl.classList.add("animate-turn");
   
-      cardEl.classList.remove("h-[84px]");
+      cardEl.classList.remove("h-[90px]");
       if (desc.length <= 143) {
-        cardEl.classList.add("h-[132px]");
+        cardEl.classList.add("h-[138px]");
       } else if (desc.length > 143 && desc.length <= 286) {
-        cardEl.classList.add("h-[156px]");
+        cardEl.classList.add("h-[164px]");
       } else {
-        cardEl.classList.add("h-[180px]");
+        cardEl.classList.add("h-[186px]");
       }
     } else {
       arrowEl.src = "/arrow-up.svg";
@@ -37,20 +37,23 @@ const ExpCard = ({ header, from, to, img, children }) => {
       arrowEl.classList.add("animate-turn");
 
       if (desc.length <= 143) {
-        cardEl.classList.remove("h-[132px]");
+        cardEl.classList.remove("h-[138px]");
       } else if (desc.length > 143 && desc.length <= 286) {
-        cardEl.classList.remove("h-[156px]");
+        cardEl.classList.remove("h-[164px]");
       } else {
-        cardEl.classList.remove("h-[180px]");
+        cardEl.classList.remove("h-[186px]");
       }
-      cardEl.classList.add("h-[84px]");
+      cardEl.classList.add("h-[90px]");
     }
   }
 
   return (
-    <div id="card" className="m-3 h-[84px] rounded-lg bg-white transition-all duratiton-300 ease-in-out">
+    <div
+      id={header + " card"}
+      className="h-[90px] bg-white rounded-lg transition-all duratiton-300 ease-in-out"
+    >
       <div
-        className="flex justify-between rounded-lg cursor-pointer transition-shadow duration-300 hover:shadow-md"
+        className="flex justify-between h-[90px] border-4 border-neutral-300 rounded-lg cursor-pointer transition-shadow duration-300 hover:shadow-md"
         onClick={() => {
           setDescVisibility(!descVisible);
           expand();
@@ -70,7 +73,7 @@ const ExpCard = ({ header, from, to, img, children }) => {
           </div>
         </div>
         <Image
-          id="arrow"
+          id={header + " arrow"}
           className="m-3"
           src="/arrow-down.svg"
           width={30}
